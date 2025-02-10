@@ -1,7 +1,18 @@
+# Overview
+
+In 2024 I began a project evaluating Haskell's QuickCheck library. To test we wrote a demo program that runs a poker game utilizing quickcheck to determine the winner. 
+
+# Cards Demo
+
+To run:
+   cabal build
+   cabal run
+
+# Report
 John Bedette and Vivek Srirama  
 Functional Programming Winter 2024
 
-# **An Examination of QuickCheck and Generators in Haskell**
+## **An Examination of QuickCheck and Generators in Haskell**
 
 ### Introduction:  
 
