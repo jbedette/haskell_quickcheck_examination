@@ -60,7 +60,7 @@ Functional Programming Winter 2024
    Haskell QuickCheck 
    ![testQC](./test_quickcheck.png) 
 
-      VS.
+   VS.
 
    Python Hypothesis 
    ![testHyp](./test_hypo.png)
