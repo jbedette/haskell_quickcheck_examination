@@ -23,9 +23,8 @@ Functional Programming Winter 2024
 
 ### Examples and Our Project:  
 #### Generators for Basic Types:  
-**Card Generator** 
 
-   Hand of Cards (list of Cards) Generator:  
+**Hand of Cards (list of Cards) Generator:**
 
    ![genCards](./images/gen_card.png)
 
@@ -43,7 +42,7 @@ Functional Programming Winter 2024
 
    This is an example of an Arbitrary type class and arbitrary method defined for the Card Generator. It is different from the generator below since the arbitrary method only generates Cards that are 1s and 2s. However, the generator we use in our program (generateCard) generates Cards of all Values. This shows how the arbitrary method might not always be what we want to use for generating a data type.
 
-**Composite Generators:**
+#### Composite Generators:
 
    Generator that takes in a list of Cards generator and an integer generator.  
 
@@ -58,11 +57,13 @@ Functional Programming Winter 2024
    When comparing Haskell’s QuickCheck to QuickCheck’s implementations in other languages, it is important to examine the difference in design paradigms. Haskell’s defining characteristics are that it uses strong typing, lazy evaluation, immutability, and is purely functional. Python’s dynamic typing, eager evaluation, mutable variables, and largely object oriented design has resulted in a slightly different and possibly inferior implementation of QuickCheck. While the largest gap in functionality that we found is a result of eager evaluation vs lazy evaluation, we will first go over some of the more trivial differences.  
 	  
    Haskell QuickCheck 
+
    ![testQC](./images/test_quickcheck.png) 
 
    VS.
 
    Python Hypothesis 
+
    ![testHyp](./images/test_hypo.png)
 
    First there are syntactic differences, Python’s property based testing suite is called Hypothesis. It uses decorator syntax with @given to set typing and takes in the following test\_reverse\_sum function as its argument, then defines a testing function that contains Hypothesis’s assert function to return a boolean. In Haskell, QuickCheck is able to take prop\_reverseSum as an argument, while Python generally would enclose the test within its own function. Haskell is much more concise, while these examples are similar in length, extending this out to a more complex testing suite would require more handwritten assertions in Python, while Haskell would just continue with quickCheck anyFunction.   
